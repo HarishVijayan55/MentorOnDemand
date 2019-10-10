@@ -1,0 +1,109 @@
+<body style="background: linear-gradient(to bottom, #33ccff 0%, #0835af 100%); margin-left:0 ;height:1000px;">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand">
+            <h1 style="color:white">Mentor on Demands</h1>
+        </a>
+        <a [routerLink]="['/admintechnology']" class="navbar-brand ml-auto">
+            <h5 style="color:white">Technology</h5>
+        </a>
+        <a [routerLink]="['/manageaccount']" class="navbar-brand">
+            <h5 style="color:white">&nbsp;&nbsp;&nbsp;Manage Accounts</h5>
+        </a>
+        <a [routerLink]="['/adminsignin']" class="navbar-brand">
+            <h5 style="color:white">&nbsp;&nbsp;&nbsp;Logout</h5>
+        </a>
+    </nav>
+
+    <div style="margin-top:2cm">
+        <h3 style="color:whitesmoke">Mentors Data</h3>
+        <table style="font-size:24px; background-color:rgb(104, 143, 182); color:cornsilk">
+            <tr height="70">
+                <th style="padding-left:25px" width="400">MailId</th>
+                <th width="250">Type</th>
+                <th width="250">Technology</th>
+                <th width="250">Salary</th>
+                <th width="250">Action</th>
+            </tr>
+            <hr>
+            <tr height="70">
+                <td style="padding-left:25px">harish@esayway.com</td>
+                <td>Trainer</td>
+                <td>Java FSD</td>
+                <td>&#8377;16,000</td>
+                <td><button type="button" class="btn btn-primary pushme2">Block</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary pushme2">Unblock</button></td>
+            </tr>
+            <tr height="70">
+                <td style="padding-left:25px">jagan@easyway.com</td>
+                <td>Trainer</td>
+                <td>MeanStack</td>
+                <td>&#8377;14,000</td>
+                <td><button type="button" class="btn btn-primary pushme2">Block</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary pushme2">Unblock</button>
+                </td>
+            </tr>
+            <tr height="70">
+                <td style="padding-left:25px">GokulRaj@easyway.com</td>
+                <td>Trainer</td>
+                <td>Hibernate</td>
+                <td>&#8377;18,000</td>
+                <td><button type="button" class="btn btn-primary pushme2">Block</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary pushme2">Unblock</button>
+                </td>
+            </tr>
+        </table><br>
+
+
+        <h3 style="color:whitesmoke">Students Data</h3>
+        <table style="font-size:24px; background-color:rgb(104, 143, 182); color:cornsilk">
+            <!-- <thead class="thead-dark"> -->
+                <tr height="70">
+                    <th style="padding-left:25px" width="400">MailId</th>
+                    <th width="250">Type</th>
+                    <th width="250">Technology</th>
+                    <th width="250">Fee</th>
+                    <th width="250">Action</th>
+                </tr>
+            <!-- </thead> -->
+            <hr>
+            <!-- <tbody>
+                <tr *ngFor="let one of search1">
+                    <td>{{one.username}}</td>
+                    <td>{{one.technology}}</td>
+                    <td>
+                        <form><button class="btn btn-danger navbar-btn" (click)="deleteUser(one.username)"
+                                data-toggle="modal" data-target="#myModal">Block</button></form>
+                    </td>
+                </tr>
+            </tbody> -->
+             <tr height="70">
+                <td style="padding-left:25px">dinesh@esayway.com</td>
+                <td>Trainee</td>
+                <td>Java</td>
+                <td>&#8377;14,000</td>
+                <td><button type="button" class="btn btn-primary pushme2">Block</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary pushme2">Unblock</button>
+                </td>
+            </tr>
+            <tr height="70">
+                <td style="padding-left:25px">karthick@esayway.com</td>
+                <td>Trainee</td>
+                <td>Hibernate</td>
+                <td>&#8377;16,000</td>
+                <td><button type="button" class="btn btn-primary pushme2">Block</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary pushme2">Unblock</button>
+                </td>
+            </tr>
+            <tr height="70">
+                <td style="padding-left:25px">bala@esayway.com</td>
+                <td>Trainee</td>
+                <td>Spring</td>
+                <td>&#8377;15,000</td>
+                <td><button type="button" class="btn btn-primary pushme2">Block</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary pushme2">Unblock</button>
+                </td>
+            </tr> 
+        </table><br><br>
+    </div>
+</body>

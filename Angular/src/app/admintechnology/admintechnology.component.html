@@ -1,0 +1,68 @@
+<body style="background: linear-gradient(to bottom, #33ccff 0%, #0835af 100%); margin-left:0 ;height:770px;">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand">
+            <h1 style="color:white">Mentor on Demands</h1>
+        </a>
+        <a [routerLink]="['/admintechnology']" class="navbar-brand ml-auto">
+            <h5 style="color:white">Technology</h5>
+        </a>
+        <a [routerLink]="['/manageaccount']" class="navbar-brand">
+            <h5 style="color:white">&nbsp;&nbsp;&nbsp;Manage Accounts</h5>
+        </a>
+        <a [routerLink]="['/adminsignin']" class="navbar-brand">
+            <h5 style="color:white">&nbsp;&nbsp;&nbsp;Logout</h5>
+        </a>
+    </nav>
+    <div style="margin-top:2cm">
+        <!-- <div style="height:680px; background-color: cadetblue"> -->
+        <div style="margin-left:11cm;">
+            <form [formGroup]="addTechnologyForm" (ngSubmit)="onAddTechnnology()">
+                <table border="1" style="font-size:24px; background-color:rgb(104, 143, 182); color:cornsilk">
+                    <tr height="70">
+                        <th style="padding-left:25px" width="200">Technology</th>
+                        <th width="200">Fee</th>
+                        <th width="200">Action</th>
+                    </tr>
+                    <tr height="70">
+                        <td style="padding-left:25px">Angular</td>
+                        <td>&#8377;11,000</td>
+                        <td>&nbsp;<button type="button">Remove</button></td>
+                    </tr>
+                    <tr height="70">
+                        <td style="padding-left:25px">Java</td>
+                        <td>&#8377;15,000</td>
+                        <td>&nbsp;<button type="button">Remove</button></td>
+                    </tr>
+                    <tr height="70">
+                        <td style="padding-left:25px">Spring</td>
+                        <td>&#8377;15,000</td>
+                        <td>&nbsp;<button type="button">Remove</button></td>
+                    </tr>
+                    <tr height="70">
+                        <td style="padding-left:25px">Hibernate</td>
+                        <td>&#8377;16,000</td>
+                        <td>&nbsp;<button type="button">Remove</button></td>
+                    </tr>
+                    <tr height="70">
+
+                        <td colspan="3" style="padding-left:3cm">
+                            <div class="form-group">
+                                <input type="text" formControlName="addtechnology" class="form-control"
+                                    name="addtechnology" [ngClass]="{'is-valid':submitted && t.addtechnology.errors}"
+                                    placeholder="Type to add Technology..">
+                                <div *ngIf="submitted && t.addtechnology.errors" class="invalid-feedback">
+                                    <div *ngIf="t.addtechnology.errors.required">Type Technology name</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">&nbsp;Add Technology</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </div>
+</body>   

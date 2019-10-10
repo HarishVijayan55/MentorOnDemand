@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand">
+        <h1 style="color:white">Mentor on Demands</h1>
+    </a>
+    <a [routerLink]="['/mentorstatus']" class="navbar-brand ml-auto">
+        <h4 style="color:white">Status</h4>
+    </a>
+    <a [routerLink]="['/mentorprofile']" class="navbar-brand ">
+        <h4 style="color:white">Notification</h4>
+    </a>
+    <a [routerLink]="['/mentorsignin']" class="navbar-brand ">
+        <h4 style="color:white">Logout</h4>
+    </a>
+</nav>
+
+<body style="background: linear-gradient(to bottom, #33ccff 0%, #0835af 100%); margin-left:0 ;height:700px;">
+    <form>
+        <div class="sign-up-htm">
+            <div class="group">
+                <br>
+                <h2 style="font-size:30px; margin-left:15cm">Mentor's Profile</h2>
+
+                <table style="margin-top:1cm; font-size:28px; margin-left: 12cm">
+                    <tr *ngFor='let in of counter() ;let i = index'>
+                        <td>{{m1[i]}}</td>
+                        <td>{{m2[i]}}</td>
+                    </tr>
+                   
+                </table><br>
+            </div>
+            <div style="font-size:24px; margin-left:18.5cm">
+                <a [routerLink]="['/mentoredit']"><button type="button" class="btn btn-secondary">Edit
+                        Profile</button></a>
+            </div>
+
+
+        </div>
+    </form>
+</body>

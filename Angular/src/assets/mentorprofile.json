@@ -1,0 +1,20 @@
+{
+    "mentor1": [
+        "UserName(EmailId)",
+        "Mobile number",
+        "Technology",
+        "Experience",
+        "Working time",
+        "LinkedURL",
+        "Training Delivered"
+    ],
+    "mentordetails": [
+        ":aaa@easyway.com",
+        ":9090909090",
+        ":Java FSD, MeanStack, Dotnet",
+        ":8",
+        " :9am to 6pm",
+        ":linkedin.com/harish55",
+        ":8"
+    ]
+}

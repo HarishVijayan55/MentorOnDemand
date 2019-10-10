@@ -1,0 +1,53 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body> -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+    <!-- Brand/logo -->
+    <a class="navbar-brand"><h1 style="color:white">Mentor on Demands</h1></a>
+		
+    <!-- Links -->
+    <a [routerLink]="['/signup']" class="nav-link bg-light nav ml-auto">SignUp</a>
+    <a [routerLink]="['/signin']" class="nav-link bg-light">SignIn</a>
+    <a class="nav-link bg-light" href="#">Home</a>
+  </nav>
+  <app-indexbody></app-indexbody>
+  
+  <!-- <app-indexbody></app-indexbody> -->
+  <!--<div class="container">
+    <p class="design" style="font-weight:45px;">Welcome to improve your skills </p>
+  </div>
+  <div class="main">
+    <div class="input-group">
+      <p>Choose a Course to know its description:</p>
+    
+      <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input type="text" placeholder="hg" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      <!-- <input type="text" class="form-control" placeholder="Search mentors">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>-->
+<!--    </div>
+  </div>
+  
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmYq6hRkqInbt04cnQx8YA3Ifk5SiQPjEcYh5vf6JWW8GQ3cMw"
+    class="float-right" alt="idea" width="40%" height="40%">-->

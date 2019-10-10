@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand">
+        <h1 style="color:white">Mentor on Demands</h1>
+    </a>
+    <a class="navbar-brand ml-auto" href="#">
+        <h5 style="color:white">Home</h5>
+    </a>
+</nav>
+
+<body style="background: linear-gradient(to bottom, #33ccff 0%, #0835af 100%); margin-left:0 ;height:680px;">
+
+    <div class="container" style="margin-left:12cm">
+
+        <div class="col-md-6">
+            <div id="logbox">
+                <form id="signup" method="post" action="/mentorprofile">
+                    <h1>Mentor login</h1>
+                    <input name="user[email]" [(ngModel)]="mail" type="email" placeholder="enter your email" class="input pass" />
+                    <input name="user[password]" [(ngModel)]="pass" type="password" placeholder="enter your password" required="required"
+                        class="input pass" />
+                    <div class="text-center">
+                        <button (click)="msubmit()" class="btn btn-secondary">Signup</button>
+                        <div class="text-center">
+                            <a [routerLink]="['/signup']" id="">create an account</a> - <a [routerLink]="['/mentorsignin']" id="">forgot
+                                password</a><br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,35 @@
+<div class="card" style="background: linear-gradient(to bottom, #33ccff 0%, #0835af 100%); margin-left:0 ;">
+    <span style="COLOR:BLACK">
+        <form>
+            <div class="text-center">
+                <span>Choose a Course to know its description:</span><br>
+                <div class="dropdown">
+                    <button class="dropbtn">Select a course:</button>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/angularhome']">Angular</a>
+                        <a [routerLink]="['/javahome']">Java</a>
+                        <a [routerLink]="['/springhome']">Spring</a>
+                        <a [routerLink]="['/hibernate']">Hibernate</a>
+                    </div>&nbsp;&nbsp;&nbsp;
+                </div>
+                <form [formGroup]="searchTechnologyForm" (ngSubmit)="searchTechnologySubmit()">
+                    <div class="form-group">
+                            <div >Type Course Name</div>
+                        <input type="text" formControlName="searchtechnology" class="form-control"
+                           
+                            placeholder="Search Course" name="searchtechnology" />
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </span>
+</div>
+ <!-- [ngClass]="{ 'is-invalid': submitted && s.searchTechnology.errors }" -->
+ <!-- <div *ngIf="submitted && s.searchtechnology.errors" class="invalid-feedback">
+        <div *ngIf="s.searchtechnology.errors.required">Type Course Name</div>
+    </div> -->

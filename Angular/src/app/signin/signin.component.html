@@ -1,0 +1,197 @@
+<!--        <div class="container">
+            <div class="row">
+              <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card card-signin flex-row my-5">
+                  <div class="card-img-left d-none d-md-flex">
+                     <!-- Background image for card set in CSS! 
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Student's Signin </h5>
+                    <form class="form-signin">
+                      
+                      <div class="form-label-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                        
+                      </div>
+                      
+                      <hr>
+        
+                      <div class="form-label-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        
+                      </div>
+                    <hr>
+        
+                     <a [routerLink]="['/studentindex']"> <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Signin</button></a>
+                      <a class="d-block text-center mt-2 small" href="#">forgot password</a>
+                      <hr class="my-4">
+                      <!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+                      <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button> -->
+<!-- </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>               -->
+
+<!--<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-xl-9 mx-auto">
+      <div class="card card-signin flex-row my-5">
+        <div class="card-body">
+          <h2 class="card-title text-center">Student's Signin </h2>
+          <div class="wrapper">
+            <form class="form-signin" [formGroup]="LogInForm" (ngSubmit)="onSubmit() && LogInForm.valid">
+              <h2 class="form-signin-heading">Login</h2>
+              <label for="Email">Email</label>
+              <input type="text" class="form-control" id="Email" formControlName="Email" [(ngModel)]="model.username">
+              <div *ngIf="submitted && f.Email.errors">
+                <div *ngIf="f.Email.errors.required">Email is needed</div>
+                <div *ngIf="f.Email.errors.email">Email must be a valid email address</div>
+              </div>
+              <br>
+              <label for="Password">Password</label>
+              <input type="password" class="form-control" id="Password" formControlName="Password"
+                [(ngModel)]="model.password">
+              <div *ngIf="submitted && f.Password.errors">
+                <div *ngIf="f.Password.errors.required">Password is needed</div>
+                <div *ngIf="f.Password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+              <br>
+              <div *ngIf="model.invalidStatus">
+                <button type="button" class="btn btn-danger">{{model.errorMessage}}</button>
+              </div>
+              <a [routerLink]="['/studentindex']"> <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Signin</button></a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand">
+    <h1 style="color:white">Mentor on Demands</h1>
+  </a>
+  <a class="navbar-brand ml-auto" href="#">
+    <h5 style="color:white">Home</h5>
+  </a>
+
+</nav>
+
+<body>
+  <div style="height:100%; background-color: cadetblue">
+    <div class="container" style="margin-left:12cm">
+
+      <div class="col-md-6">
+        <div id="logbox">
+          <form id="signup" method="post" action="/signup">
+            <h1>Student-login</h1>
+            <input name="user[email]" type="email" placeholder="enter your email" class="input pass" />
+            <input name="user[password]" type="password" placeholder="enter your password" required="required"
+              class="input pass" /><br>
+            <a [routerLink]="['/studentindex']"> <button class="btn btn-lg btn-secondary btn-block text-uppercase"
+                type="submit">Signin</button></a>
+            <div class="text-center"><br>
+              <a [routerLink]="['/signup']" id="">create an account</a> - <a [routerLink]="['/signin']" id="">forgot
+                password</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>-->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand">
+    <h1 style="color:white">Mentor on Demands</h1>
+  </a>
+  <a class="navbar-brand ml-auto" href="#">
+    <h5 style="color:white">Home</h5>
+  </a>
+
+</nav>
+
+<!-- <div style="height:680px; background-color: cadetblue"> -->
+
+<body style="background: linear-gradient(to bottom, #33ccff 0%, #0835af 100%); margin-left:0 ;height:680px;">
+  <div class="container">
+
+    <div class="col-md-6">
+      <div id="logbox" style="background-color:#688fb6; color:cornsilk">
+        <form [formGroup]="userForm" (ngSubmit)="onUserSubmit()">
+          <h1 style="color: whitesmoke">Student-Signin</h1>
+
+
+          <div class="form-group">
+            <input type="text" formControlName="useremail" class="form-control input pass"
+              [ngClass]="{ 'is-invalid': submitted && g.useremail.errors }" placeholder="Enter E-mail"/>
+            <div *ngIf="submitted && g.useremail.errors" class="invalid-feedback">
+              <div *ngIf="g.useremail.errors.required">Email is required</div>
+              <div *ngIf="g.useremail.errors.email">Email must be a valid email address</div>
+            </div>
+          </div>
+          
+          
+          <div class="form-group">
+            <input type="password" formControlName="userpassword" class="form-control input pass"
+              [ngClass]="{ 'is-invalid': submitted && g.userpassword.errors }" placeholder="Enter password"/>
+            <div *ngIf="submitted && g.userpassword.errors" class="invalid-feedback">
+              <div *ngIf="g.userpassword.errors.required">Password is required</div>
+              <div *ngIf="g.userpassword.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+          </div>
+
+          <div class="form-group text-center">
+            <button class="btn btn-secondary" type="submit">Signin</button>
+          </div>
+
+          <div class="text-center"><br>
+            <a [routerLink]="['/signup']" id="">create an account</a> - <a [routerLink]="['/signin']" id="">forgot
+              password</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--col-md-6-->
+
+    <div class="col-md-6">
+      <div id="logbox" style="background-color:rgb(104, 143, 182); color:cornsilk">
+        <form [formGroup]="mentorForm" (ngSubmit)="onSubmit()">
+          <h1 style="color: whitesmoke">Mentor-Signin</h1>
+
+          <div class="form-group">
+            <input type="text" formControlName="email" class="form-control input pass"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Enter E-mail"/>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="password" formControlName="password" class="form-control input pass"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Enter password"/>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+          </div>
+
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-secondary">Signin</button>
+          </div>
+          <div class="text-center"><br>
+            <a [routerLink]="['/signup']" id="">create an account</a> - <a [routerLink]="['/signin']" id="">forgot
+              password</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</body>

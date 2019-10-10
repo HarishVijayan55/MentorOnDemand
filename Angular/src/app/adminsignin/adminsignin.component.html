@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand">
+        <h1 style="color:white">Mentor on Demands</h1>
+    </a>
+</nav>
+
+<body style=" background: linear-gradient(to bottom, #33ccff 0%, #0835af 100%); margin-left:0 ;height:700px;">
+    <!-- <div style="height:100%; background-color: cadetblue"> -->
+        <div class="container" style="margin-left:11cm; ">
+
+            <div class="col-md-6">
+                <div id="logbox" style="background-color:rgb(104, 143, 182); color:cornsilk">
+                    <form [formGroup]="adminForm" (ngSubmit)="onAdminSubmit()">
+                        <h1 style="color:whitesmoke">Admin login</h1>
+                       
+                        <div class="form-group">
+                          <input type="text" formControlName="adminemail" class="form-control input pass"
+                            [ngClass]="{ 'is-invalid': submitted && a.adminemail.errors }" placeholder="Enter E-mail"/>
+                          <div *ngIf="submitted && a.adminemail.errors" class="invalid-feedback">
+                            <div *ngIf="a.adminemail.errors.required">Email is required</div>
+                            <div *ngIf="a.adminemail.errors.email">Email must be a valid email address</div>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                          <input type="password" formControlName="adminpassword" class="form-control input pass"
+                            [ngClass]="{ 'is-invalid': submitted && a.adminpassword.errors }" placeholder="Enter password"/>
+                          <div *ngIf="submitted && a.adminpassword.errors" class="invalid-feedback">
+                            <div *ngIf="a.adminpassword.errors.required">Password is required</div>
+                            <div *ngIf="a.adminpassword.errors.minlength">Password must be at least 6 characters</div>
+                          </div>
+                        </div>
+
+                        <div class="form-group text-center">
+                          <button type="submit" class="btn btn-secondary">Signin</button>
+                          
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+</body>
